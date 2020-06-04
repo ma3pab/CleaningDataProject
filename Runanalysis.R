@@ -4,18 +4,16 @@
 
 ### Load Relevant libraries ----------------------------------------------------
 
-library(rstudioapi)
 library(dplyr)
 
 ### 0. Load Initial Data --------------------------------------------------------
 
-# Obtain the current directory to load in initial datasets
-# RStudioApi package will need to be installed
-directory_path <- dirname(rstudioapi::getActiveDocumentContext()$path)
+# UCI HAR Dataset is assumed to be in your working directory as the folder name
+directory_path <- getwd()
 
 # Use read.table to load in the test and train datasets (ignoring intertial signals data)
         # Data identifying the subject for each test in the x test dataset        
-        subjecttestdata <- read.table(paste0(directory_path, "/UCI HAR Dataset/test/subject_test.txt"))
+        subjecttestdata <- read.table(paste0(directory_path,"/UCI HAR Dataset/test/subject_test.txt"))
 
         # Data identifying the results of the tests in the test dataset        
         xtestdata <- read.table(paste0(directory_path, "/UCI HAR Dataset/test/X_test.txt"))
