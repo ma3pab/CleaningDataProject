@@ -99,7 +99,7 @@ directory_path <- dirname(rstudioapi::getActiveDocumentContext()$path)
         # file as to why this is considered tidy data
         
         # output the final tidy dataset as a text file
-        write.table(tidyactivitydata, file = paste0(directory_path, "/tidyactivitydata.txt"))        
+        write.table(tidyactivitydata, file = paste0(directory_path, "/tidyactivitydata.txt"), row.name=FALSE)        
         
      
         
